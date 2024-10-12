@@ -17,33 +17,43 @@
             margin-top: 20px;
             display: none; /* Initially hide the iframe */
         }
+        #iframeContainer2 {
+            margin-top: 20px;
+            display: none; /* Initially hide the iframe */
+        }
     </style>
 </head>
 <body>
-    <header>
+    <header class="header">
         <nav>
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./quizzes.html">Quizzes  (you are here)</a></li>
-                <li><a target="_blank" href="https://www.roblox.com/games/95376731037124/RELEASE-Backrooms-Math">Play the game!</a></li>
+                <li><a href="./gamepage.html">Play the game!</a></li>
             </ul>
         </nav>
     </header
-    <nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <!-- <nav>
         <ul>
             <li><a href="#fifthgrade">5th grade quiz</a></li>
             <li><a href="#sixthgrade">6th grade quiz</a></li>
             <li><a href="#seventhgrade">7th grade quiz</a></li>
         </ul>
-    </nav>
+    </nav> -->
 
     <br>
     <div class="fifthgradequiz" id="fifthgrade">
         <div>
-            <h1 id="fifthgrade">5th Grade Quiz</h1>
+            <h1 id="fifthgrade">Finish the quiz for a surprise!</h1>
             <form id="quizForm">
                 <div>
-                    <p>1. What is the area of a square with a side length of 12?</p>
+                    <h3>1. What is the area of a square with a side length of 12?</h3>
                     <label>
                         <input type="radio" name="q1" value="incorrect1"> 12
                     </label><br>
@@ -56,7 +66,7 @@
                 </div>
 
                 <div>
-                    <p>2.  4.57 + 3.892 = ?</p>
+                    <h3>2.  4.57 + 3.892 = ?</h3>
                     <label>
                         <input type="radio" name="q2" value="correct"> 8.462
                     </label><br>
@@ -69,7 +79,7 @@
                 </div>
 
                 <div>
-                    <p>3. Convert 3.5 kilometers to meters </p>
+                    <h3>3. Convert 3.5 kilometers to meters </h3>
                     <label>
                         <input type="radio" name="q3" value="incorrect1"> 35 meters
                     </label><br>
@@ -80,7 +90,7 @@
                         <input type="radio" name="q3" value="correct"> 3500 meters
                     </label><br>
                 </div>
-
+                <br>
                 <button type="submit">Submit</button>
             </form>
         </div>
@@ -106,7 +116,7 @@
                 const answers = {
                     q1: 'correct',
                     q2: 'correct',
-                    q3: 'correct
+                    q3: 'correct',
                 };
 
                 // Check answers
@@ -128,15 +138,22 @@
                 }
             });
         </script>
-    </div>
-
+    <!-- </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <div class="sixthgradequiz" id="sixthgrade">
         <div>
-            <h1 id="fifthgrade">6th Grade Quiz</h1>
-            <form id="quizForm">
+            <h1 id="sixthgrade">6th Grade Quiz</h1>
+            <form id="quizForm2">
                 <div>
-                    <p>1. Solve for y: 3y - 7 = 8</p>
+                    <h3>1. Solve for y: 3y - 7 = 8</h3>
                     <label>
                         <input type="radio" name="q1" value="correct"> 5
                     </label><br>
@@ -149,7 +166,7 @@
                 </div>
 
                 <div>
-                    <p>2. Find the volume fo a cube with side length 4 cm</p>
+                    <h3>2. Find the volume fo a cube with side length 4 cm</h3>
                     <label>
                         <input type="radio" name="q2" value="incorrect2"> 64m
                     </label><br>
@@ -162,7 +179,7 @@
                 </div>
 
                 <div>
-                    <p>3. Find the mean of the data set {5, 7, 3, 8, 10} </p>
+                    <h3>3. Find the mean of the data set {5, 7, 3, 8, 10} </h3>
                     <label>
                         <input type="radio" name="q3" value="correct"> 6.6
                     </label><br>
@@ -178,16 +195,16 @@
             </form>
         </div>
 
-        <div id="result"></div>
-        <div id="iframeContainer">
+        <div id="result2"></div>
+        <div id="iframeContainer2">
             <h2>Enjoy this Scratch Project!</h2>
-            <iframe src="https://scratch.mit.edu/projects/639555105/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            <iframe src="https://scratch.mit.edu/projects/713136296/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
         </div>
 
         <script>
-            const form = document.getElementById('quizForm');
-            const resultDiv = document.getElementById('result');
-            const iframeContainer = document.getElementById('iframeContainer');
+            const form = document.getElementById('quizForm2');
+            const resultDiv = document.getElementById('result2');
+            const iframeContainer = document.getElementById('iframeContainer2');
 
             form.addEventListener('submit', function(event) {
                 event.preventDefault(); // Prevent page reload
@@ -199,7 +216,7 @@
                 const answers = {
                     q1: 'correct',
                     q2: 'correct',
-                    q3: 'correct
+                    q3: 'correct',
                 };
 
                 // Check answers
@@ -224,46 +241,46 @@
     </div>
 
     <br>
-    <div class="sventhgradequiz" id="seventhgrade">
+    <div class="seventhgradequiz" id="seventhgrade">
         <div>
-            <h1 id="seventgrade">6th Grade Quiz</h1>
+            <h1 id="seventhtgrade">7th Grade Quiz</h1>
             <form id="quizForm">
                 <div>
-                    <p>1. Solve for y: 3y - 7 = 8</p>
+                    <h3>1. Solve the equation for x: 2x + 3 = 15</h3>
                     <label>
-                        <input type="radio" name="q1" value="correct"> 5
+                        <input type="radio" name="q1" value="incorrect2"> 13
                     </label><br>
                     <label>
-                        <input type="radio" name="q1" value="incorrect1"> 15
+                        <input type="radio" name="q1" value="incorrect1"> 2
                     </label><br>
                     <label>
-                        <input type="radio" name="q1" value="incorrect2"> -4
-                    </label><br>
-                </div>
-
-                <div>
-                    <p>2. Find the volume fo a cube with side length 4 cm</p>
-                    <label>
-                        <input type="radio" name="q2" value="incorrect2"> 64m
-                    </label><br>
-                    <label>
-                        <input type="radio" name="q2" value="incorrect1"> 16cm
-                    </label><br>
-                    <label>
-                        <input type="radio" name="q2" value="correct"> 64cm
+                        <input type="radio" name="q1" value="correct"> 6
                     </label><br>
                 </div>
 
                 <div>
-                    <p>3. Find the mean of the data set {5, 7, 3, 8, 10} </p>
+                    <h3>2. Convert the fraction 7/10 into a  decimal</h3>
                     <label>
-                        <input type="radio" name="q3" value="correct"> 6.6
+                        <input type="radio" name="q2" value="incorrect1"> 3.5/5
                     </label><br>
                     <label>
-                        <input type="radio" name="q3" value="incorrect2"> 31
+                        <input type="radio" name="q2" value="correct"> 0.7
                     </label><br>
                     <label>
-                        <input type="radio" name="q3" value="incorrect1"> 24
+                        <input type="radio" name="q2" value="incorrect2"> 70%
+                    </label><br>
+                </div>
+
+                <div>
+                    <h3>3. Translate into words: |3x-1|=3 </h3>
+                    <label>
+                        <input type="radio" name="q3" value="correct"> 1 is 3 far away from the product of 3 and a number
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q3" value="incorrect2"> The absolute value of 3x subtracted by 1
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q3" value="incorrect1"> -1 is 3 far away from the product of 3 and a
                     </label><br>
                 </div>
 
@@ -274,7 +291,7 @@
         <div id="result"></div>
         <div id="iframeContainer">
             <h2>Enjoy this Scratch Project!</h2>
-            <iframe src="https://scratch.mit.edu/projects/639555105/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            <iframe src="https://scratch.mit.edu/projects/813655575/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
         </div>
 
         <script>
@@ -292,7 +309,7 @@
                 const answers = {
                     q1: 'correct',
                     q2: 'correct',
-                    q3: 'correct
+                    q3: 'correct',
                 };
 
                 // Check answers
@@ -314,6 +331,6 @@
                 }
             });
         </script>
-    </div>
+    </div> -->
 </body>
 </html>
