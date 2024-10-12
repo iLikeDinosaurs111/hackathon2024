@@ -5,7 +5,7 @@
   } */
 
 html{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0LPNb6bl_HQjwGEw_AR6iyUhWT1tbdUp_hg&s);
+    background-image: URL("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0LPNb6bl_HQjwGEw_AR6iyUhWT1tbdUp_hg&s");
     color:white;
 }
 body {
