@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quiz with Embedded Iframe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        #iframeContainer {
+            margin-top: 20px;
+            display: none; /* Initially hide the iframe */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./quizzes.html">Quizzes  (you are here)</a></li>
+                <li><a target="_blank" href="https://www.roblox.com/games/95376731037124/RELEASE-Backrooms-Math">Play the game!</a></li>
+            </ul>
+        </nav>
+    </header
+    <nav>
+        <ul>
+            <li><a href="#fifthgrade">5th grade quiz</a></li>
+            <li><a href="#sixthgrade">6th grade quiz</a></li>
+            <li><a href="#seventhgrade">7th grade quiz</a></li>
+        </ul>
+    </nav>
+
+    <br>
+    <div class="fifthgradequiz" id="fifthgrade">
+        <div>
+            <h1 id="fifthgrade">5th Grade Quiz</h1>
+            <form id="quizForm">
+                <div>
+                    <p>1. What is the area of a square with a side length of 12?</p>
+                    <label>
+                        <input type="radio" name="q1" value="incorrect1"> 12
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q1" value="correct"> 144
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q1" value="incorrect2"> 48
+                    </label><br>
+                </div>
+
+                <div>
+                    <p>2.  4.57 + 3.892 = ?</p>
+                    <label>
+                        <input type="radio" name="q2" value="correct"> 8.462
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q2" value="incorrect1"> 14.93
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q2" value="incorrect2"> 0.678
+                    </label><br>
+                </div>
+
+                <div>
+                    <p>3. Convert 3.5 kilometers to meters </p>
+                    <label>
+                        <input type="radio" name="q3" value="incorrect1"> 35 meters
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q3" value="incorrect2"> 3.5 meters
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q3" value="correct"> 3500 meters
+                    </label><br>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="result"></div>
+        <div id="iframeContainer">
+            <h2>Enjoy this Scratch Project!</h2>
+            <iframe src="https://scratch.mit.edu/projects/639555105/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+
+        <script>
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('result');
+            const iframeContainer = document.getElementById('iframeContainer');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent page reload
+
+                let score = 0;
+                const totalQuestions = 3;
+
+                // Correct answers
+                const answers = {
+                    q1: 'correct',
+                    q2: 'correct',
+                    q3: 'correct
+                };
+
+                // Check answers
+                for (let question in answers) {
+                    const selectedAnswer = form[question].value;
+                    if (selectedAnswer === answers[question]) {
+                        score++;
+                    }
+                }
+
+                // Display result
+                resultDiv.textContent = `You scored ${score} out of ${totalQuestions}.`;
+
+                // Show iframe if all questions are correct
+                if (score === totalQuestions) {
+                    iframeContainer.style.display = 'block'; // Show the iframe
+                } else {
+                    iframeContainer.style.display = 'none'; // Hide the iframe
+                }
+            });
+        </script>
+    </div>
+
+    <br>
+    <div class="sixthgradequiz" id="sixthgrade">
+        <div>
+            <h1 id="fifthgrade">6th Grade Quiz</h1>
+            <form id="quizForm">
+                <div>
+                    <p>1. Solve for y: 3y - 7 = 8</p>
+                    <label>
+                        <input type="radio" name="q1" value="correct"> 5
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q1" value="incorrect1"> 15
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q1" value="incorrect2"> -4
+                    </label><br>
+                </div>
+
+                <div>
+                    <p>2. Find the volume fo a cube with side length 4 cm</p>
+                    <label>
+                        <input type="radio" name="q2" value="incorrect2"> 64m
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q2" value="incorrect1"> 16cm
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q2" value="correct"> 64cm
+                    </label><br>
+                </div>
+
+                <div>
+                    <p>3. Find the mean of the data set {5, 7, 3, 8, 10} </p>
+                    <label>
+                        <input type="radio" name="q3" value="correct"> 6.6
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q3" value="incorrect2"> 31
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q3" value="incorrect1"> 24
+                    </label><br>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="result"></div>
+        <div id="iframeContainer">
+            <h2>Enjoy this Scratch Project!</h2>
+            <iframe src="https://scratch.mit.edu/projects/639555105/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+
+        <script>
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('result');
+            const iframeContainer = document.getElementById('iframeContainer');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent page reload
+
+                let score = 0;
+                const totalQuestions = 3;
+
+                // Correct answers
+                const answers = {
+                    q1: 'correct',
+                    q2: 'correct',
+                    q3: 'correct
+                };
+
+                // Check answers
+                for (let question in answers) {
+                    const selectedAnswer = form[question].value;
+                    if (selectedAnswer === answers[question]) {
+                        score++;
+                    }
+                }
+
+                // Display result
+                resultDiv.textContent = `You scored ${score} out of ${totalQuestions}.`;
+
+                // Show iframe if all questions are correct
+                if (score === totalQuestions) {
+                    iframeContainer.style.display = 'block'; // Show the iframe
+                } else {
+                    iframeContainer.style.display = 'none'; // Hide the iframe
+                }
+            });
+        </script>
+    </div>
+
+    <br>
+    <div class="sventhgradequiz" id="seventhgrade">
+        <div>
+            <h1 id="seventgrade">6th Grade Quiz</h1>
+            <form id="quizForm">
+                <div>
+                    <p>1. Solve for y: 3y - 7 = 8</p>
+                    <label>
+                        <input type="radio" name="q1" value="correct"> 5
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q1" value="incorrect1"> 15
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q1" value="incorrect2"> -4
+                    </label><br>
+                </div>
+
+                <div>
+                    <p>2. Find the volume fo a cube with side length 4 cm</p>
+                    <label>
+                        <input type="radio" name="q2" value="incorrect2"> 64m
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q2" value="incorrect1"> 16cm
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q2" value="correct"> 64cm
+                    </label><br>
+                </div>
+
+                <div>
+                    <p>3. Find the mean of the data set {5, 7, 3, 8, 10} </p>
+                    <label>
+                        <input type="radio" name="q3" value="correct"> 6.6
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q3" value="incorrect2"> 31
+                    </label><br>
+                    <label>
+                        <input type="radio" name="q3" value="incorrect1"> 24
+                    </label><br>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="result"></div>
+        <div id="iframeContainer">
+            <h2>Enjoy this Scratch Project!</h2>
+            <iframe src="https://scratch.mit.edu/projects/639555105/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </div>
+
+        <script>
+            const form = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('result');
+            const iframeContainer = document.getElementById('iframeContainer');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent page reload
+
+                let score = 0;
+                const totalQuestions = 3;
+
+                // Correct answers
+                const answers = {
+                    q1: 'correct',
+                    q2: 'correct',
+                    q3: 'correct
+                };
+
+                // Check answers
+                for (let question in answers) {
+                    const selectedAnswer = form[question].value;
+                    if (selectedAnswer === answers[question]) {
+                        score++;
+                    }
+                }
+
+                // Display result
+                resultDiv.textContent = `You scored ${score} out of ${totalQuestions}.`;
+
+                // Show iframe if all questions are correct
+                if (score === totalQuestions) {
+                    iframeContainer.style.display = 'block'; // Show the iframe
+                } else {
+                    iframeContainer.style.display = 'none'; // Hide the iframe
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
